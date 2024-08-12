@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Encodings.Web;
 
 namespace Basics.Controllers
 {
@@ -12,9 +13,13 @@ namespace Basics.Controllers
         }
         // 
         // GET: /HelloWorld/Welcome/ 
-        public string Welcome(string name, int x, int y)
+        public string Welcome(string name = "Ece", int x = 4, int y = 2)
         {
-            return $"Hello {name}, x+y={x+y}";
+            return HtmlEncoder.Default.Encode($"Hello {name}, x/y={x / y}");
+        }
+        public string Welcome2(string name, int ID = 1)
+        {
+            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
         }
     }
 }
