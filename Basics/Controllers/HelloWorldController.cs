@@ -7,12 +7,20 @@ namespace Basics.Controllers
     {
         // 
         // GET: /HelloWorld/
-        public string Index()
+        /*public string Index() //step1
         {
             return "This is my default action...";
         }
+        */
+        //string döndürmek gibi view diyerek html gibi bir page döndürülebilir
+
+        public IActionResult Index() //step2
+        {
+            return View();
+        }
         // 
-        // GET: /HelloWorld/Welcome/ 
+        // GET: /HelloWorld/Welcome/
+        /*
         public string Welcome(string name = "Ece", int x = 4, int y = 2)
         {
             return HtmlEncoder.Default.Encode($"Hello {name}, x/y={x / y}");
@@ -21,5 +29,14 @@ namespace Basics.Controllers
         {
             return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
         }
+       Burada direkt html formatında bir string döndürmesini sağlıyorduk
+        Peki view() şeklinde dönmesini istersem neler olacak?
+        */    
+    public IActionResult Welcome(string name, int numTimes = 1)
+        {
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+            return View();
+        }
     }
-}
+ }
