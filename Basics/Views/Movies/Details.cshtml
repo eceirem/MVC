@@ -45,6 +45,9 @@
          asp-route-id: Dinamik bir parametre sağlar
          URL'ye eklenir ve eyleme bu parametre ile yönlendirme yapar.
          Kısacası bu, eylemin hangi film üzerinde işlem yapacağını anlamına gelir.--->
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn-blue"> Edit</a>
+    <a asp-action="Index" class="btn-blue"> Back to List </a>
 </div>
+@section stylecss {
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+}

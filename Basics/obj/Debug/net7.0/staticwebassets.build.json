@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rYg/Vydf4h3uf87ChTAqftkmFELktHYwGsParFDmfwc=",
+  "Hash": "rt1OP91sexg6sTfsK7mNizxap/leD4gCxB+z1qdA6Xg=",
   "Source": "Basics",
   "BasePath": "_content/Basics",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\ece\\coding\\codes\\C#\\MVC\\Basics\\wwwroot\\css\\style.css",
+      "SourceId": "Basics",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ece\\coding\\codes\\C#\\MVC\\Basics\\wwwroot\\",
+      "BasePath": "_content/Basics",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\ece\\coding\\codes\\C#\\MVC\\Basics\\wwwroot\\favicon.ico",

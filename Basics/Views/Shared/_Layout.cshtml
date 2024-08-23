@@ -6,6 +6,9 @@
     <title>@ViewData["Title"] - Movie App</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <!--Burada css dahil etmek için herhangi bir ad verdim stylecss şeklinde-->
+    @await RenderSectionAsync("stylecss", required: false)
+
     <link rel="stylesheet" href="~/Basics.styles.css" asp-append-version="true" />
 </head>
 <body>
