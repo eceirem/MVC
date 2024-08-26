@@ -13,6 +13,9 @@ namespace Basics.Controllers
             _logger = logger;
         }
 
+        //controller'daki methodlara action diyoruz 
+        //controller'ın adında view'de bir klasör oluşturuyor
+        //her action için bir web sayfası oluşturuyoruz
         public IActionResult Index()
         {
             return View();

@@ -18,8 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\ece\coding\codes\C#\MVC\Basics
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/ece/coding/codes/C\#/MVC/Basics/Views/Employee/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXgxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ece/coding/codes/C\#/MVC/Basics/Views/Employee/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXgyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ece/coding/codes/C\#/MVC/Basics/Views/Employee/Index3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXgzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ece/coding/codes/C\#/MVC/Basics/Views/HelloWorld/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ece/coding/codes/C\#/MVC/Basics/Views/HelloWorld/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxJbmRleDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ece/coding/codes/C\#/MVC/Basics/Views/HelloWorld/Welcome.cshtml]

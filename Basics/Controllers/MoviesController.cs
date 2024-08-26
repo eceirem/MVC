@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Basics.Data;
-using MvcMovie.Models;
+using Basics.Models;
 
 namespace Basics.Controllers
 {
@@ -19,12 +19,50 @@ namespace Basics.Controllers
             _context = context;
         }
 
-        // GET: Movies
-        public async Task<IActionResult> Index()
-        {
-              return _context.Movie != null ? 
-                          View(await _context.Movie.ToListAsync()) :
-                          Problem("Entity set 'BasicsContext.Movie'  is null.");
+		// GET: Movies
+		public async Task<IActionResult> Index(string movieGenre, string searchString)// Index(string id)
+                                                                                      //içerisine id dışında argüman koyarsak bu bir search() algoritmasına dönüşür
+                                                                                      //url'e searchSting = ... şeklinde arama yapabilirim.
+                                                                                      //kolay yol olarak id yazabilirim /Movies/Index/ghost şeklinde arama yapabilirim
+                                                                                      //ancak bu çok userfriendly değil bundan dolayı bir UI element lazım
+        {   //filmleri tiplerine göre de arayabilirim. bunun için moveiGenre eklendi
+
+            if (_context.Movie == null)
+            {
+                return Problem("Entity set 'Basics.Context.Movie'  is null.");
+            }
+
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Movie
+                                            orderby m.Genre
+                                            select m.Genre;
+
+            //burada bir seearch() algoritması oluşturduk
+            //Nüyük harflerle çevirerek olası sorunları çözdük
+            var movies = from m in _context.Movie
+						 select m;
+
+			if (!String.IsNullOrEmpty(searchString))
+			{
+				movies = movies.Where(s => s.Title!.ToUpper().Contains(searchString.ToUpper()));
+            }
+
+
+            if (!string.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(x => x.Genre == movieGenre);
+            }
+
+            //burada filmleri ve türlerini listeledim
+            var movieGenreVM = new MovieGenreViewModel
+            {
+                //burada dropdown menüdeki kategoriler için veri çektim
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Movies = await movies.ToListAsync(),
+                SearchString = searchString
+            };
+
+            return View(movieGenreVM);
         }
 
         // GET: Movies/Details/5
@@ -70,7 +108,8 @@ namespace Basics.Controllers
         // GET: Movies/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Movie == null)
+			//ilk öncelikle veriyi alıyorum  (HTTP GET)
+			if (id == null || _context.Movie == null)
             {
                 return NotFound();
             }
@@ -85,9 +124,11 @@ namespace Basics.Controllers
 
         // POST: Movies/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // burada da sunucuya veri gönderiyorum
         [HttpPost]
-        [ValidateAntiForgeryToken]
+		//Anti-Forgery Token, CSRF saldırılarına karşı koruma sağlayan bir güvenlik önlemidir. 
+        //Formlarda kullanılarak, form gönderimlerinin yetkisiz erişimlere karşı güvenliğini artırır.
+		[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (id != movie.Id)
