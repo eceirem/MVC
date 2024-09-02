@@ -1,7 +1,43 @@
-﻿<div class="text-center">
-    <h1 class="display-4">Courses</h1>
-    <p>
-        <a class="btn btn-primary" asp-action="Apply">For Apply Link</a>
-    </p>
+﻿@model IEnumerable<Candidates>
+<!---Buradaki Course/Index'in çalışması için LAyout sayfasına eklemem gerekti
+    Yoksa BtkAkademi yazısına tıklayınca yeni bir url'e gitmiyor.--->
+@{
+    ViewData["Title"] = "Course Page";
+}
 
-</div>
+@if (Model.Count() > 0)
+{ 
+    <h6 class="display-6">
+        Applications(@Model.Count())
+    </h6>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Apply At</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Candidates candidate in Model)
+            {
+                <tr>
+                    <td>@candidate.Email</td>
+                    <td>@candidate.Fullname</td>
+                    <td>@candidate.ApplyAt</td>
+                    <td>@candidate.SelectedCourse</td>
+                </tr>                
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+
+        There is no applications. Please click <a class="alert-link" asp-action="Apply">here</a> to apply!
+    </div>
+    
+}
+
