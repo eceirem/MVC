@@ -1,0 +1,20 @@
+﻿@{
+    //isteğe bağlı bu işlem yapılabilir eğer varsayılan olmasını istemiyorsam
+    //Layout = null;
+}
+@model Product   
+
+<h3>
+    @Model.ProductName
+</h3>
+<p>
+    @Model.ProductPrice
+</p>
+<a asp-controller="Product">List</a>
+ 
+<!--Sadece bu kısma özel olacak-->
+@section Header{
+    <div>
+        Header only for Get
+    </div>
+}

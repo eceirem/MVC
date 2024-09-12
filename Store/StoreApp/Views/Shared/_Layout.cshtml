@@ -1,0 +1,19 @@
+﻿<html>
+    <head>
+        <title></title>
+        </head>
+    <body>
+        <header>
+            Store App : Header
+            <partial name="_Navbar"/>
+            @RenderSection("Header",false)
+        </header>
+        <main>@RenderBody()</main>
+        <footer>
+        @RenderSection("Footer", false)
+        Footer
+        </footer
+        <!--asenkron şekilde de tanımlanabilir bu RenderSectionlar-->
+        @await RenderSectionAsync("Scripts",required:false)
+    </body>
+</html>

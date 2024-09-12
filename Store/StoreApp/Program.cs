@@ -12,6 +12,9 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
 });
 
 var app = builder.Build();
+
+//statik dosyalarý kullanmak istiyorum
+app.UseStaticFiles();
 //Her þeye elle map edemeyiz bu kýsmý otomatik yapmamýz lazým
 //app.MapGet("/", () => "Hello World!");
 //app.MapGet("/btk", () => "BTK");

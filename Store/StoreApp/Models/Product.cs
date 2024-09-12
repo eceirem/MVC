@@ -4,6 +4,6 @@
     {
         public int ProductId { get; set; }
         public String? ProductName { get; set; } = String.Empty;
-        public decimal ? ProductPrice { get; set; }
+        public decimal ProductPrice { get; set; }
     }
 }

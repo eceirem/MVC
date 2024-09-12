@@ -1,0 +1,13 @@
+﻿@model Product
+
+<div>
+	<h2>@Model.ProductName</h2>
+	<!--bruada ToString() yapısında error alıyordum çünkü 
+		product.cs dosyasında fiyat kısmı null olabilir şekilde
+		public decimal ? ProductPrice { get; set; }
+		soru işareti barındırıyordu bu erroru kaldırmak için soru işareti silindi-->
+	<p>@Model.ProductPrice.ToString("c")</p>
+	<a asp-action="Get" asp-route-id="@Model.ProductId">Get Details</a>
+	<hr/>
+
+</div> 
