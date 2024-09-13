@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\Error.html"
     },
     {
+      "Id": "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\StoreApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpg",
+      "PackagePath": "staticwebassets\\images\\default.jpg"
+    },
+    {
+      "Id": "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
       "Id": "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\StoreApp\\wwwroot\\lib\\bootsrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootsrap\\css\\bootstrap-grid.css"
     },

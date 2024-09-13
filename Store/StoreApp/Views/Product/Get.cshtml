@@ -10,11 +10,21 @@
 <p>
     @Model.ProductPrice
 </p>
-<a asp-controller="Product">List</a>
+<div>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
+        <i class="fa-solid fa-house"></i>
+        Home
+        </a>
+    <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
+        <i class="fa-solid fa-list"></i>
+        Products
+        </a>
+
+</div>
  
-<!--Sadece bu kısma özel olacak-->
-@section Header{
+<!--Sadece bu kısma özel olmasını istediğim ifadeler-->
+@* @section Header{
     <div>
         Header only for Get
     </div>
-}
+} *@
