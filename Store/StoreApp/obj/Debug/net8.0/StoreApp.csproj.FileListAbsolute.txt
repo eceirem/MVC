@@ -125,3 +125,9 @@ C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\zh-Hans\Microsoft.Cod
 C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\StoreApp.staticwebassets.runtime.json
 C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\libman.json
+C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\Entities.dll
+C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\Entities.pdb
+C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\Repositories.dll
+C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\Repositories.pdb
+C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\Services.dll
+C:\ece\coding\codes\C#\MVC\Store\StoreApp\bin\Debug\net8.0\Services.pdb

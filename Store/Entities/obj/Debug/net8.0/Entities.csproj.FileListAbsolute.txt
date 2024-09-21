@@ -1,0 +1,12 @@
+C:\ece\coding\codes\C#\MVC\Store\Entities\bin\Debug\net8.0\Entities.deps.json
+C:\ece\coding\codes\C#\MVC\Store\Entities\bin\Debug\net8.0\Entities.dll
+C:\ece\coding\codes\C#\MVC\Store\Entities\bin\Debug\net8.0\Entities.pdb
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\Entities.dll
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\refint\Entities.dll
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\Entities.pdb
+C:\ece\coding\codes\C#\MVC\Store\Entities\obj\Debug\net8.0\ref\Entities.dll

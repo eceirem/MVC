@@ -1,17 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using StoreApp.Models;
+using Entities.Models;
+using Repositories;
+using Repositories.Contracts;
+using Services.Contracts;
 
 namespace StoreApp.Controllers
 {
     public class ProductController : Controller
     {
-        //RepositoryContextin bir kaydı varsa kendisi newliyor ve oluşturuyor
-        private readonly RepositoryContext _context;
+		//RepositoryContextin bir kaydı varsa kendisi newliyor ve oluşturuyor
+		//artık bir IRepoManager ile çalışıyoruz bir soytulama işlemi yapıyoruz
+		//private readonly IRepositoryManager _manager;
+		//yukarıdaki ifadeyi istemiyorum çünkü repop değil service ile ileitişim kuracağım
+		private readonly IServiceManager _manager;
 
-        public ProductController(RepositoryContext context)
+		public ProductController(IServiceManager manager)
         {
-            _context = context;
+			_manager = manager;
         }
 
         public IActionResult Index()
@@ -28,18 +33,25 @@ namespace StoreApp.Controllers
             //    new DbContextOptionsBuilder<RepositoryContext>() benden options tipi istiyor
             //    .UseSqlite("Data Source=./ProductDb.db")
             //    .Options);          
-            //3.adım
+            //3.adım dependency injection DI
             //return _context.Products; 
             //yukarıdaki ifade sayesinde bu işlemi yapabilirim
-            //view ile dönmesini istiyorum
-            var model = _context.Products.ToList();
+            //view ile dönmesini istiyorum öncesinde ise manager ile ulaşım sağlıyorum
+            var model = _manager.ProductService.GetAllProducts(false);
             return View(model);
         }
         //bu fonksiyon ile sadece tek bir veriye id üzerinden ulaşım sağlayacağım
-        public IActionResult Get(int id)
+        //endpointlerle oynamalar yapılabilir bu yüzden daha temiz tanım lazım
+        //bu yüzden FromRoute kullanıyoruz
+        public IActionResult Get([FromRoute(Name="id")]int id)
         {
-            Product product = _context.Products.First(p => p.ProductId.Equals(id));
-            return View(product);
+            //direkt databaseden veri çekiyoruz.
+            //Product product = _context.Products.First(p => p.ProductId.Equals(id));
+            //return View(product);
+            //verileri bir Product repositoryden çekiyorduk ancak artık service var.
+            //bu yüzden Product. ile ulaşmaktansa ProcutService ile ulaşabilirim
+            var model = _manager.ProductService.GetOneProduct(id, false);
+            return View(model);
         }
     }
 }
