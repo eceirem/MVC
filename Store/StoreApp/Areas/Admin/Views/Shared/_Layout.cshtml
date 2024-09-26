@@ -1,0 +1,33 @@
+﻿<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="~/lib/bootsrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/all.css"/>
+
+        </head>
+    <body>
+        <header>
+            <partial name="_Navbar"/>
+            @RenderSection("Header",false)
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        <footer>
+            <partial name="_Footer"/>
+            @RenderSection("Footer", false)
+        </footer>
+        <!--asenkron şekilde de tanımlanabilir bu RenderSectionlar-->
+
+        <script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/bootsrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="~/lib/font-awesome/js/all.min.js"></script>
+
+        @await RenderSectionAsync("Scripts",required:false)
+
+    </body>
+</html>
