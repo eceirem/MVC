@@ -9,4 +9,9 @@ public class Product
     public string? ProductName { get; set; } = string.Empty;
 	[Required(ErrorMessage = "Product price is required.")]    
 	public decimal ProductPrice { get; set; }
+
+    public int? CategoryId { get; set; } //Foreign key 
+
+	public Category? Category { get; set; } //navigation property
+
 }

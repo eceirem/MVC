@@ -23,8 +23,22 @@
 				<tr>
 				<td>@prd.ProductId</td>
 				<td>@prd.ProductName</td>
-				<td>@prd.ProductPrice</td>
-				<td>.</td>
+				<td>@prd.ProductPrice.ToString("c")</td>
+				<td> 
+					<div class="btn-group">
+						<a class="btn btn-warning" asp-action="Update" asp-route-id="@prd.ProductId">
+							<i class="fa fa-edit"></i>
+							Edit</a>						
+						<a class="btn btn-danger" asp-action="Delete" asp-route-id="@prd.ProductId">
+							<i class="fa fa-trash"></i>
+							Delete
+						</a>
+							<a class="btn btn-info" target="_blank" asp-action="Get" asp-area="" asp-route-id="@prd.ProductId">
+								<i class="fa fa-search"></i>
+								Store
+							</a>
+					</div>
+				</td>
 				</tr>
 			}
 		</tbody>
