@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\Entities\\Entities.csproj": {}
+    "C:\\coding\\codes\\MVC\\Store\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\Entities\\Entities.csproj": {
+    "C:\\coding\\codes\\MVC\\Store\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\coding\\codes\\MVC\\Store\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\ece\\coding\\codes\\C#\\MVC\\Store\\Entities\\obj\\",
+        "projectPath": "C:\\coding\\codes\\MVC\\Store\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\eceir\\.nuget\\packages\\",
+        "outputPath": "C:\\coding\\codes\\MVC\\Store\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eceir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
