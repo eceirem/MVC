@@ -7,7 +7,7 @@
 namespace StoreApp.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class start : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,6 +33,8 @@ namespace StoreApp.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     ProductName = table.Column<string>(type: "TEXT", nullable: false),
                     ProductPrice = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Summary = table.Column<string>(type: "TEXT", nullable: true),
+                    ImageUrl = table.Column<string>(type: "TEXT", nullable: true),
                     CategoryId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
@@ -56,16 +58,16 @@ namespace StoreApp.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "CategoryId", "ProductName", "ProductPrice" },
+                columns: new[] { "ProductId", "CategoryId", "ImageUrl", "ProductName", "ProductPrice", "Summary" },
                 values: new object[,]
                 {
-                    { 1, 2, "Computer", 45000m },
-                    { 2, 2, "Keybord", 5000m },
-                    { 3, 2, "Mouse", 2000m },
-                    { 4, 2, "Monitor", 15000m },
-                    { 5, 2, "Deck", 3000m },
-                    { 6, 1, "History", 300m },
-                    { 7, 1, "Hamlet", 150m }
+                    { 1, 2, "/images/1.jpg", "Computer", 45000m, "" },
+                    { 2, 2, "/images/2.jpg", "Keybord", 5000m, "" },
+                    { 3, 2, "/images/3.jpg", "Mouse", 2000m, "" },
+                    { 4, 2, "/images/4.jpg", "Monitor", 15000m, "" },
+                    { 5, 2, "/images/5.jpg", "Deck", 3000m, "" },
+                    { 6, 1, "/images/6.jpg", "History", 300m, "" },
+                    { 7, 1, "/images/7.jpg", "Hamlet", 150m, "" }
                 });
 
             migrationBuilder.CreateIndex(

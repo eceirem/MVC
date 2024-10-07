@@ -2,8 +2,9 @@
 <div class="text-center">
 	<div class="display-6">Create</div>
 </div>
-
-<form method="post" asp-action="Create">
+<!--enctype benim için önemli işleyeceği veri türleri arasına bianry verileri de ekledim
+file upload için formda sorun yaşamamak için yaptım bunu--->
+<form method="post" asp-action="Create" enctype="multipart/form-data">
 	<div class="text-danger" asp-validation-summary="All"></div>
 
 	<div class="from-group my-3">
@@ -18,9 +19,20 @@
 		<label asp-for="ProductName"></label>
 		<input asp-for="ProductName" class="form-control"/>
 	</div>
+
+	<div class="from-group my-3">
+		<label asp-for="Summary"></label>
+		<input asp-for="Summary" class="form-control"/>
+	</div>
+
 	<div class="from-group">
 		<label asp-for="ProductPrice"></label>
 		<input asp-for="ProductPrice" class="form-control" />
+	</div>
+
+	<div class="from-group">
+		<label asp-for="ImageUrl"></label>
+		<input name="file" type="file" class="form-control" />
 	</div>
 
 	<div class="from-group my-3">

@@ -11,8 +11,8 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20241005115909_init")]
-    partial class init
+    [Migration("20241007075948_start")]
+    partial class start
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,11 +56,17 @@ namespace StoreApp.Migrations
                     b.Property<int?>("CategoryId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("ProductPrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ProductId");
@@ -74,50 +80,64 @@ namespace StoreApp.Migrations
                         {
                             ProductId = 1,
                             CategoryId = 2,
+                            ImageUrl = "/images/1.jpg",
                             ProductName = "Computer",
-                            ProductPrice = 45000m
+                            ProductPrice = 45000m,
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 2,
                             CategoryId = 2,
+                            ImageUrl = "/images/2.jpg",
                             ProductName = "Keybord",
-                            ProductPrice = 5000m
+                            ProductPrice = 5000m,
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 3,
                             CategoryId = 2,
+                            ImageUrl = "/images/3.jpg",
                             ProductName = "Mouse",
-                            ProductPrice = 2000m
+                            ProductPrice = 2000m,
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 4,
                             CategoryId = 2,
+                            ImageUrl = "/images/4.jpg",
                             ProductName = "Monitor",
-                            ProductPrice = 15000m
+                            ProductPrice = 15000m,
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 5,
                             CategoryId = 2,
+                            ImageUrl = "/images/5.jpg",
                             ProductName = "Deck",
-                            ProductPrice = 3000m
+                            ProductPrice = 3000m,
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 6,
                             CategoryId = 1,
+                            ImageUrl = "/images/6.jpg",
                             ProductName = "History",
-                            ProductPrice = 300m
+                            ProductPrice = 300m,
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 7,
                             CategoryId = 1,
+                            ImageUrl = "/images/7.jpg",
                             ProductName = "Hamlet",
-                            ProductPrice = 150m
+                            ProductPrice = 150m,
+                            Summary = ""
                         });
                 });
 

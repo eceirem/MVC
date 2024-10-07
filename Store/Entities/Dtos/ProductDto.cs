@@ -16,8 +16,8 @@ namespace Entities.Dtos
 		public string? ProductName { get; init; } = string.Empty;
 		[Required(ErrorMessage = "Product price is required.")]
 		public decimal ProductPrice { get; init; }
-
 		public int? CategoryId { get; init; } //Foreign key 
-
+		public String? Summary { get; init; } = String.Empty;
+		public String? ImageUrl { get; set; }
 	}
 }
