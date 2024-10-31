@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\images\\default.jpg"
     },
     {
+      "Id": "C:\\coding\\codes\\MVC\\Store\\StoreApp\\wwwroot\\images\\laptopimg.jpg",
+      "PackagePath": "staticwebassets\\images\\laptopimg.jpg"
+    },
+    {
       "Id": "C:\\coding\\codes\\MVC\\Store\\StoreApp\\wwwroot\\images\\s23.jpg",
       "PackagePath": "staticwebassets\\images\\s23.jpg"
     },

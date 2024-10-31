@@ -1,0 +1,43 @@
+# Ignore build results
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files by Visual Studio
+.vscode/
+.vs/
+.idea/
+.DS_Store
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Packages
+*.nupkg
+*.snupkg
+
+# Log files
+*.log
+
+# Backup & temporary files
+*~
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+
+# ASP.NET runtime files
+appsettings.Development.json
+appsettings.Production.json
+
+# Sensitive files
+secret.json
+.env
+

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hxzpZ4E3Tttuz0SWYEt4FVxSZ755iQINHVDp7O/3pRg=",
+  "Hash": "8akNzvgRlFMPNA8IplsskTan4mOrnB3XgelPaETROyw=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\default.jpg"
+    },
+    {
+      "Identity": "C:\\coding\\codes\\MVC\\Store\\StoreApp\\wwwroot\\images\\laptopimg.jpg",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\coding\\codes\\MVC\\Store\\StoreApp\\wwwroot\\",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "images/laptopimg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\laptopimg.jpg"
     },
     {
       "Identity": "C:\\coding\\codes\\MVC\\Store\\StoreApp\\wwwroot\\images\\s23.jpg",
