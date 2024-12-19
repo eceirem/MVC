@@ -8,6 +8,7 @@ obj/
 *.user
 *.userosscache
 *.sln.docstates
+*.vsidx
 
 # Auto-generated files by Visual Studio
 .vscode/
@@ -32,6 +33,9 @@ ScaffoldingReadMe.txt
 *.bak
 *.old
 *.orig
+*.dll
+*.map
+.cache
 
 # ASP.NET runtime files
 appsettings.Development.json
