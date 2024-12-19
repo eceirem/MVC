@@ -1,0 +1,36 @@
+﻿@model LoginModel
+@{
+}
+<div class="text-center my-3">
+    <h6 class="display-6">
+        <i class="fa-solid texet-white fa-right-to-bracket p-3 rounded"></i>
+        <br />
+        Login</h6>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div>
+            <div class="text-danger" asp-validation-summary="All"></div>
+        </div>
+        <form asp-action="Login" asp-controller="Account">
+            <input type="hidden" asp-for="ReturnUrl"/>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input type="password" asp-for="Password" class="form-control" />
+            </div>
+            <div class="form-group my-3 d-flex justify-content-around">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    Login
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
